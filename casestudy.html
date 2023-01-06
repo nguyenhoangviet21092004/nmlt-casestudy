@@ -95,12 +95,14 @@
                 <td>${data[i].email}</td>
                 <td>${data[i].class}</td>
                 <td>${data[i].role}</td>
-              
+                <button onclick="deleteItem(${data[i].id})" id="delete">Delete </button>
             </tr>`
             }
 
             document.getElementById("imbe").innerHTML = table;
         }
+
+
 
         </script>
 </body>
