@@ -9,6 +9,7 @@
 </head>
 
 <body>
+      <!-- //phần thêm bước 1 tạo from -->
     <div class="body">
         <div id="head">
             <h1> Manager User</h1>
@@ -37,10 +38,19 @@
                 <option value="Giáo viên">Giáo viên</option>
                 <option value="Học sinh">Học sinh</option>
             </select>
-            
+            <!-- //phần thêm - bước 2 tạo sự kiện onclick -->
+            <button id="submit" onclick="add()">Add+</button>
         </div>
-         
-          </script>
+            <script>
+                function add() {
+                    var item_id = document.getElementById("id").value;
+            var item_name = document.getElementById("name").value;
+            var item_email = document.getElementById("email").value;
+            var item_class = document.getElementById("class").value;
+            var item_role = document.getElementById("role").value;
+                }
+            </script>
+          
     </div>
 </body>
 
