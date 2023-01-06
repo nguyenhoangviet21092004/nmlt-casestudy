@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Manager User</h1>
     <div>
-    <div >
-        <label for="">ID</label>
-        <input type="number" id="id">
-    </div>
-    <div>
-        <label for="">Name</label>
-        <input type="text" id="name">
-    </div>
-    <div>
-        <label for="">Email</label>
-        <input type="email" id="email">
-    </div>
-    <div>
-        <label for="">Class</label>
-        <select name="" id="class">
-            <option value=""></option>
-            <option value="IBSK1D1">IBSK1D1</option>
-            <option value="IBSK1D2">IBSK1D2</option>
-        </select>
-    </div>
-    <div>
-        <label for="">Role</label>
-        <select name="" id="role">
-            <option value=""></option>
-            <option value="Teacher">Teacher</option>
-            <option value="Student">Student</option>
-        </select>
-        <button onclick="add()" id="add">Add+</button>
-    </div>    
+        <div>
+            <label for="">ID</label>
+            <input type="number" id="id">
+        </div>
+        <div>
+            <label for="">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="">Class</label>
+            <select name="" id="class">
+                <option value=""></option>
+                <option value="IBSK1D1">IBSK1D1</option>
+                <option value="IBSK1D2">IBSK1D2</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Role</label>
+            <select name="" id="role">
+                <option value=""></option>
+                <option value="Teacher">Teacher</option>
+                <option value="Student">Student</option>
+            </select>
+            <button onclick="add()" id="add">Add+</button>
+        </div>
 
-    <script>
-        function add() {
-            let item_id = document.getElementById("id").value;
-            let item_name = document.getElementById("name").value;
-            let item_email = document.getElementById("email").value;
-            let item_class = document.getElementById("class").value;
-            let item_role = document.getElementById("role").value;
-        }
-    </script>
+        <script>
+             let data = [];
+            function add() {
+                let item_id = document.getElementById("id").value;
+                let item_name = document.getElementById("name").value;
+                let item_email = document.getElementById("email").value;
+                let item_class = document.getElementById("class").value;
+                let item_role = document.getElementById("role").value;
+
+                if (item_id == "" || item_name == "" || item_email == "" || item_class == "" || item_role == "") {
+                    alert("Vui Lòng Nhập Đầy Đủ")
+                } else {
+                    let item = {
+                        id: item_id,
+                        name: item_name,
+                        email: item_email,
+                        class: item_class,
+                        role: item_role,
+                    }
+                    data.push(item);
+                    
+                }
+            }
+        </script>
 </body>
+
 </html>
