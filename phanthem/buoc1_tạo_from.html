@@ -1,79 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <!-- //phần thêm bước 1 tạo from -->
-    <div class="body">
-        <div id="head">
-            <h1> Manager User</h1>
-        </div>
-
-        <div class="menu">
-
-            <input type="number" id="id" placeholder="Mã sinh viên">
-
-
-            <input type="text" id="name" placeholder="Tên đăng nhập">
-
-
-            <input type="email" id="email" placeholder="Email">
-
-
-            <select id="class">
-                <option value="">Chọn lớp</option>
-                <option value="IBSK1D1">IBSK1d1</option>
-                <option value="IBSK1D2">IBSK1d2</option>
-            </select>
-
-
-            <select id="role">
-                <option value="">Chức vụ</option>
-                <option value="Giáo viên">Giáo viên</option>
-                <option value="Học sinh">Học sinh</option>
-            </select>
-
-            <button id="submit" onclick="add()">Add</button>
-        </div>
-        <table class="table" id="render">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Class</th>
-                    <th>Role</th>
-                    <th>action</th>
-                </tr>
-            </thead>
-        </table>
-
-
-    </div>
-    <script>
-        var data = [];
-        function add() {
-            var item_id = document.getElementById("id").value;
-            var item_name = document.getElementById("name").value;
-            var item_email = document.getElementById("email").value;
-            var item_class = document.getElementById("class").value;
-            var item_role = document.getElementById("role").value;
-            var obj = {
-                id: item_id,
-                name: item_name,
-                email: item_email,
-                class: item_class,
-                role: item_role,
-            }
-            data.push(obj);
-        }
-    </script>
+    
 </body>
-
 </html>
