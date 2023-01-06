@@ -64,7 +64,7 @@
                 let item_role = document.getElementById("role").value;
 
                 if (item_id == "" || item_name == "" || item_email == "" || item_class == "" || item_role == "") {
-                    alert("Vui Lòng Nhập Đầy Đủ")
+                    alert("Vui Lòng Nhập Đầy Đủ");
                 } else {
                     let item = {
                         id: item_id,
@@ -103,7 +103,13 @@
         }
 
         function deleteItem(id){
-           
+            for(let i = 0; i<data.length;i++){
+                if(data[i].id==id){
+                    data.splice(i,1);
+
+                    imbe();
+                }
+            }
         }
 
 
