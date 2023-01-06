@@ -38,9 +38,22 @@
                 <option value="Giáo viên">Giáo viên</option>
                 <option value="Học sinh">Học sinh</option>
             </select>
-           
+
             <button id="submit" onclick="add()">Add</button>
         </div>
+        <table class="table" id="render">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Class</th>
+                    <th>Role</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+        </table>
+
 
     </div>
     <script>
@@ -52,13 +65,13 @@
             var item_class = document.getElementById("class").value;
             var item_role = document.getElementById("role").value;
             var obj = {
-                    Id: item_id,
-                    Name: item_name,
-                    Email: item_email,
-                    Class: item_class,
-                    Role: item_role,
-                }
-                data.push(obj);
+                Id: item_id,
+                Name: item_name,
+                Email: item_email,
+                Class: item_class,
+                Role: item_role,
+            }
+            data.push(obj);
         }
     </script>
 </body>
