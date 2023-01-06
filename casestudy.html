@@ -55,7 +55,7 @@
         </table>
 
         <script>
-             let data = [];
+            let data = [];
             function add() {
                 let item_id = document.getElementById("id").value;
                 let item_name = document.getElementById("name").value;
@@ -74,9 +74,34 @@
                         role: item_role,
                     }
                     data.push(item);
-                    
+                    imbe();
+                    clear();
                 }
             }
+
+            function imbe() {
+            table = `<tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Class</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>`
+            for (let i = 0; i < data.length; i++) {
+                table += `<tr>
+                <td>${data[i].id}</td>
+                <td>${data[i].name}</td>
+                <td>${data[i].email}</td>
+                <td>${data[i].class}</td>
+                <td>${data[i].role}</td>
+              
+            </tr>`
+            }
+
+            document.getElementById("imbe").innerHTML = table;
+        }
+
         </script>
 </body>
 
