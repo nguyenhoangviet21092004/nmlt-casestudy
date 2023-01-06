@@ -44,12 +44,21 @@
 
     </div>
     <script>
+        var data = [];
         function add() {
             var item_id = document.getElementById("id").value;
             var item_name = document.getElementById("name").value;
             var item_email = document.getElementById("email").value;
             var item_class = document.getElementById("class").value;
             var item_role = document.getElementById("role").value;
+            var obj = {
+                    Id: item_id,
+                    Name: item_name,
+                    Email: item_email,
+                    Class: item_class,
+                    Role: item_role,
+                }
+                data.push(obj);
         }
     </script>
 </body>
