@@ -73,6 +73,13 @@
                         class: item_class,
                         role: item_role,
                     }
+
+                    let i = data.findIndex((c) => c.id == item.id);
+                    if (i >= 0) {
+                        data.splice(i, 1, item);
+
+                    }
+                     
                     data.push(item);
                     imbe();
                     clear();
@@ -80,7 +87,7 @@
             }
 
             function imbe() {
-            table = `<tr>
+                table = `<tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
@@ -88,8 +95,8 @@
                 <th>Role</th>
                 <th>Action</th>
             </tr>`
-            for (let i = 0; i < data.length; i++) {
-                table += `<tr>
+                for (let i = 0; i < data.length; i++) {
+                    table += `<tr>
                 <td>${data[i].id}</td>
                 <td>${data[i].name}</td>
                 <td>${data[i].email}</td>
@@ -98,33 +105,33 @@
                 <button onclick="deleteItem(${data[i].id})" id="delete">Delete </button>
                 <button onclick="editItem(${data[i].id})" id="edit">Edit </button>
             </tr>`
+                }
+
+                document.getElementById("imbe").innerHTML = table;
             }
 
-            document.getElementById("imbe").innerHTML = table;
-        }
+            function clear() {
+                document.getElementById("id").value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("class").value = "";
+                document.getElementById("role").value = "";
+            }
 
-        function clear(){
-            document.getElementById("id").value="";
-            document.getElementById("name").value="";
-            document.getElementById("email").value="";
-            document.getElementById("class").value="";
-            document.getElementById("role").value="";
-        }
+            function deleteItem(id) {
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].id == id) {
+                        data.splice(i, 1);
 
-        function deleteItem(id){
-            for(let i = 0; i<data.length;i++){
-                if(data[i].id==id){
-                    data.splice(i,1);
-
-                    imbe();
+                        imbe();
+                    }
                 }
             }
-        }
 
-        function editItem(id){
-           
+            function editItem(id) {
+
             }
-        
+
 
 
 
