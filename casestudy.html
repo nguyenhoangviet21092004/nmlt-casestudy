@@ -6,32 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        .head {
+            /* width: 100%; */
+            text-align: center;
+            display: inline;
+            border-radius: 20px;
+            /* border: solid yellow; */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #imbe {
+            width: 100%;
+            text-align: center;
+            /* display: inline; */
+            /* padding: 30px; */
+            color: blue;
+            margin: 20px;
+        }
+
+        #delete {
+            background-color: red;
+        }
+
+        #edit {
+            background-color: rgb(76, 76, 167);
+        }
+
+        #add {
+            background-color: greenyellow;
+
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Manager User</h1>
+    <h1 style="color: red;">Manager User</h1>
     <div>
-        <div>
-            <label for="">ID</label>
-            <input type="number" id="id">
+        <div class="head">
+
+            <input type="number" id="id" placeholder="ID">
         </div>
-        <div>
-            <label for="">Name</label>
-            <input type="text" id="name">
+        <div class="head">
+
+            <input type="text" id="name" placeholder="Name">
         </div>
-        <div>
-            <label for="">Email</label>
-            <input type="email" id="email">
+        <div class="head">
+
+            <input type="email" id="email" placeholder="Email">
         </div>
-        <div>
+        <div class="head">
             <label for="">Class</label>
-            <select name="" id="class">
+            <select name="" id="class" placeholder="Class">
                 <option value=""></option>
                 <option value="IBSK1D1">IBSK1D1</option>
                 <option value="IBSK1D2">IBSK1D2</option>
             </select>
         </div>
-        <div>
+        <div class="head">
             <label for="">Role</label>
             <select name="" id="role">
                 <option value=""></option>
@@ -104,8 +144,12 @@
                 <td>${data[i].email}</td>
                 <td>${data[i].class}</td>
                 <td>${data[i].role}</td>
-                <button onclick="deleteItem(${data[i].id})" id="delete">Delete </button>
-                <button onclick="editItem(${data[i].id})" id="edit">Edit </button>
+                <th>
+                     <button onclick="deleteItem(${data[i].id})" id="delete">Delete </button>
+                     <button onclick="editItem(${data[i].id})" id="edit">Edit </button>
+                </th>
+
+               
             </tr>`
                 }
 
